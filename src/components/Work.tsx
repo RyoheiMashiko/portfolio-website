@@ -49,10 +49,13 @@ export function Work() {
               className="group bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
             >
               <div className="aspect-w-16 aspect-h-9 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                <div 
+                  style={{
+                    backgroundImage: `url(${project.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                  className="w-full h-48 group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               
