@@ -9,7 +9,7 @@ export function Hero() {
           <p className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mb-16 leading-relaxed" style={{color: '#fafafa'}}>
             Frontend Developer
           </p>
-          <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mb-4">About</h2>
+          <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mb-6">About</h2>
           <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style={{color: '#fafafa'}}>
             I'm a frontend developer who loves turning ideas into working applications. Based in London, I currently manage multiple web applications that help thousands of users plan their perfect trips.
           </p>
