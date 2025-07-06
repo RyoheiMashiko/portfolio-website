@@ -37,7 +37,7 @@ export function Header() {
 
           {/* Theme Toggle and Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             
             {/* Mobile menu button */}
             <div className="md:hidden">
@@ -64,7 +64,7 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t" style={{backgroundColor: '#8c8c8c', borderColor: '#777777'}}>
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t" style={{backgroundColor: '#faffff', borderColor: '#cccccc'}}>
               <a href="#home" className="block px-3 py-2 rounded-md text-base font-medium nav-link-primary">
                 Home
               </a>

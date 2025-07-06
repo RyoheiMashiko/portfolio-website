@@ -30,10 +30,10 @@ export function Work() {
   ]
 
   return (
-    <section id="work" style={{backgroundColor: '#8c8c8c'}}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="work" style={{backgroundColor: '#faffff'}}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
         <div className="text-center mb-6">
-          <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mb-2">Projects</h2>
+          <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mb-2" style={{color: '#666666'}}>Projects</h2>
         </div>
 
         <div className="space-y-16">
@@ -57,11 +57,11 @@ export function Work() {
 
               {/* Project Info */}
               <div className={`${index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}`}>
-                <h3 className="text-lg md:text-xl font-bold mb-4" style={{color: '#f7f2f2'}}>
+                <h3 className="text-lg md:text-xl font-bold mb-4" style={{color: '#666666'}}>
                   {project.title}
                 </h3>
                 
-                <p className="text-lg mb-4 leading-relaxed" style={{color: '#fafafa'}}>
+                <p className="text-lg mb-4 leading-relaxed" style={{color: '#666666'}}>
                   {project.description}
                 </p>
                 
