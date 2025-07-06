@@ -37,7 +37,7 @@ export function Header() {
 
           {/* Theme Toggle and Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            {/* <ThemeToggle /> */}
+            <ThemeToggle />
             
             {/* Mobile menu button */}
             <div className="md:hidden">

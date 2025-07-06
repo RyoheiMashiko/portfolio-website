@@ -9,8 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Your Name",
-  description: "A passionate developer creating beautiful and functional digital experiences",
+  title: "Portfolio - Ryohei Mashiko",
+  description: "A passionate developer who loves turning ideas into something that works.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
