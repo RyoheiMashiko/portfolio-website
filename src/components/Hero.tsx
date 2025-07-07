@@ -57,16 +57,16 @@ export function Hero() {
           <div className="hidden md:block">
             {activeTab === 'about' && (
               <div>
-          <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
-            I'm a frontend developer from Japan, currently based in London. I love turning ideas into working applications, and I manage multiple web applications that help thousands of users plan their perfect trips.
+          <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl leading-relaxed" style={{color: '#666666'}}>
+            Hi! I'm a frontend developer from Japan, currently based in London. I love turning ideas into working applications and manage multiple web applications that help thousands of users plan their perfect trips.
           </p>
-          <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
+          <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl leading-relaxed" style={{color: '#666666'}}>
             I'm comfortable working with React, Vue, and Node.js, and I'm always keen to learn new technologies. While I have a professional background in frontend development, I'm also eager to explore backend technologies like Golang and Rust.
           </p>
-          <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
+          <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl leading-relaxed" style={{color: '#666666'}}>
             Before transitioning into tech, I spent four years in B2B account management, which has given me a solid understanding of the business side as well.  
           </p>
-          <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
+          <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl leading-relaxed" style={{color: '#666666'}}>
             Outside of work, I have many interests. I enjoy playing and watching volleyball, travelling, hiking, reading, running, cycling, and swimming. I also love discovering hidden gems, especially Japanese restaurants and food in London.
           </p>
             </div>
@@ -74,10 +74,10 @@ export function Hero() {
 
           {activeTab === 'work' && (
             <div>
-              <div className="space-y-8">
-                <div className="grid md:grid-cols-[auto_1fr] items-start" style={{gap: '2rem'}}>
-                  <div className="-mt-2">
-                    <img src="/images/langhelper.png" alt="LangHelper" className="w-full object-cover rounded-2xl" style={{height: '6.5rem'}} />
+              <div className="space-y-12">
+                <div className="grid md:grid-cols-[auto_1fr] items-start cursor-pointer hover:opacity-80 transition-opacity duration-200" style={{gap: '1.5rem'}} onClick={() => window.open('https://langhelper.netlify.app/', '_blank')}>
+                  <div>
+                    <img src="/images/langhelper.png" alt="LangHelper" className="w-full object-cover rounded-2xl" style={{height: '5.2rem'}} />
                   </div>
                   <div>
                     <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>LangHelper - AI Writing Assistant</h3>
@@ -89,15 +89,12 @@ export function Hero() {
                         </span>
                       ))}
                     </div>
-                    <a href="https://langhelper.netlify.app/" className="inline-flex items-center px-4 py-2 text-white font-medium rounded-lg btn-primary">
-                      Live Demo
-                    </a>
                   </div>
                 </div>
                 
-                <div className="grid md:grid-cols-[auto_1fr] items-start" style={{gap: '2rem'}}>
-                  <div className="-mt-2">
-                    <img src="/images/kasumiso.png" alt="Kasumiso" className="w-full object-cover rounded-2xl" style={{height: '6.5rem'}} />
+                <div className="grid md:grid-cols-[auto_1fr] items-start cursor-pointer hover:opacity-80 transition-opacity duration-200" style={{gap: '1.5rem'}} onClick={() => window.open('https://kasumi-sou.biz/', '_blank')}>
+                  <div>
+                    <img src="/images/kasumiso.png" alt="Kasumiso" className="w-full object-cover rounded-2xl" style={{height: '5.2rem'}} />
                   </div>
                   <div>
                     <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Kasumiso (Japanese)</h3>
@@ -109,15 +106,12 @@ export function Hero() {
                         </span>
                       ))}
                     </div>
-                    <a href="https://kasumi-sou.biz/" className="inline-flex items-center px-4 py-2 text-white font-medium rounded-lg btn-primary">
-                      Live Demo
-                    </a>
                   </div>
                 </div>
                 
-                <div className="grid md:grid-cols-[auto_1fr] items-start" style={{gap: '2rem'}}>
-                  <div className="-mt-2">
-                    <img src="/images/portfolio_v1.png" alt="Portfolio v1" className="w-full object-cover rounded-2xl" style={{height: '6.5rem'}} />
+                <div className="grid md:grid-cols-[auto_1fr] items-start cursor-pointer hover:opacity-80 transition-opacity duration-200" style={{gap: '1.5rem'}} onClick={() => window.open('https://ryoheimashiko.github.io/Portfolio_english/', '_blank')}>
+                  <div>
+                    <img src="/images/portfolio_v1.png" alt="Portfolio v1" className="w-full object-cover rounded-2xl" style={{height: '5.2rem'}} />
                   </div>
                   <div>
                     <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>My Portfolio Site v1</h3>
@@ -129,9 +123,6 @@ export function Hero() {
                         </span>
                       ))}
                     </div>
-                    <a href="https://ryoheimashiko.github.io/Portfolio_english/" className="inline-flex items-center px-4 py-2 text-white font-medium rounded-lg btn-primary">
-                      Live Demo
-                    </a>
                   </div>
                 </div>
               </div>
@@ -141,19 +132,27 @@ export function Hero() {
           {activeTab === 'experience' && (
             <div>
               <div className="space-y-8">
-                <div>
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://www.snaptripgroup.com/', '_blank')}>
                   <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Frontend Developer</h3>
-                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888'}}>2023 - Present</p>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888'}}>Snaptrip Group • Mar 2022 - Present • London</p>
                   <p className="text-left text-base leading-relaxed" style={{color: '#666666'}}>
-                    Building and maintaining web applications using React, Vue.js, and Node.js. Focus on creating user-friendly interfaces and optimizing performance for travel planning applications.
+                    Build and maintain critical frontend components across 10+ web applications serving 50,000+ daily users. Work closely with cross-functional teams, including developers, marketing, and product manager/data scientist, to deliver solutions that enhance user experience and drive commercial success.
                   </p>
                 </div>
                 
-                <div>
-                  <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>B2B Account Manager</h3>
-                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888'}}>2019 - 2023</p>
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://www.asia-quest.jp/en/', '_blank')}>
+                  <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Frontend Developer</h3>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888'}}>Asia Quest • Oct 2020 - Dec 2021 • Tokyo</p>
                   <p className="text-left text-base leading-relaxed" style={{color: '#666666'}}>
-                    Managed client relationships and business development for B2B solutions. Gained valuable experience in project management, client communication, and understanding business requirements.
+                    Quickly adapt to emerging technologies whilst consistently delivering high-quality code across multiple projects. Successfully developed a responsive car leasing web application from inception to completion, meeting all deadlines. Proactively created mock APIs to maintain frontend development progress during backend delays, ensuring continuous project advancement.
+                  </p>
+                </div>
+
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://www.itcenex.com/en/', '_blank')}>
+                  <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>B2B Account Manager</h3>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888'}}>Itochu Enex • Apr 2016 - Mar 2020 • Tokyo</p>
+                  <p className="text-left text-base leading-relaxed" style={{color: '#666666'}}>
+                    Establish and nurture strong relationships with SME executives and key decision-makers across diverse industries. Manage comprehensive credit assessments, develop pricing strategies, and lead contract negotiations to foster business growth and sustain long-term partnerships.
                   </p>
                 </div>
               </div>
