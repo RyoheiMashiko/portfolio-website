@@ -1,12 +1,24 @@
+'use client'
+
+import { useState } from 'react'
+
 export function Hero() {
+  const [activeTab, setActiveTab] = useState('about')
+
+  const tabs = [
+    { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'work', label: 'Projects' }
+  ]
+
   return (
-    <section id="home" className="pt-12 min-h-screen items-center justify-center" style={{backgroundColor: '#faffff'}}>
+    <section id="home" className="pt-12 lg:pt-20 min-h-screen items-center justify-center" style={{backgroundColor: '#faffff'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-left text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-2 tracking-tight" style={{color: '#666666'}}>
+          <h1 className="text-left text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight" style={{color: '#666666'}}>
               Ryohei Mashiko
           </h1>
-          <p className="text-left text-xl font-light sm:text-2xl lg:text-3xl leading-relaxed" style={{color: '#666666'}}>
+          <p className="text-left text-xl font-light sm:text-2xl leading-relaxed" style={{color: '#666666'}}>
             Frontend Developer
           </p>
           <div className="flex space-x-6 mt-4">
@@ -23,7 +35,28 @@ export function Hero() {
               </svg>
             </a>
           </div>
-          <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mt-20 mb-6" style={{color: '#666666'}}>About</h2>
+          
+          {/* Tab Navigation - Desktop Only */}
+          <div className="hidden md:flex space-x-8 mt-16 mb-12">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`text-lg font-medium transition-colors cursor-pointer ${
+                  activeTab === tab.id
+                    ? 'text-orange-600 border-b-2 border-orange-600'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Desktop Tab Content */}
+          <div className="hidden md:block">
+            {activeTab === 'about' && (
+              <div>
           <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
             I'm a frontend developer from Japan, currently based in London. I love turning ideas into working applications, and I manage multiple web applications that help thousands of users plan their perfect trips.
           </p>
@@ -36,6 +69,117 @@ export function Hero() {
           <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
             Outside of work, I have many interests. I enjoy playing and watching volleyball, travelling, hiking, reading, running, cycling, and swimming. I also love discovering hidden gems, especially Japanese restaurants and food in London.
           </p>
+            </div>
+          )}
+
+          {activeTab === 'work' && (
+            <div>
+              <div className="space-y-8">
+                <div className="grid md:grid-cols-[auto_1fr] items-start" style={{gap: '2rem'}}>
+                  <div className="-mt-2">
+                    <img src="/images/langhelper.png" alt="LangHelper" className="w-full object-cover rounded-2xl" style={{height: '6.5rem'}} />
+                  </div>
+                  <div>
+                    <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>LangHelper - AI Writing Assistant</h3>
+                    <p className="text-left text-base mb-3" style={{color: '#666666'}}>Easy-to-use text editing with AI proofreading for enhanced writing quality and efficiency.</p>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {['Next.js', 'Node.js', 'TypeScript', 'OpenAI API', 'Netlify Functions'].map((tech) => (
+                        <span key={tech} className="px-2 py-1 text-xs rounded-full" style={{backgroundColor: 'rgba(255, 64, 0, 0.2)', color: '#ff4000'}}>
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <a href="https://langhelper.netlify.app/" className="inline-flex items-center px-4 py-2 text-white font-medium rounded-lg btn-primary">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-[auto_1fr] items-start" style={{gap: '2rem'}}>
+                  <div className="-mt-2">
+                    <img src="/images/kasumiso.png" alt="Kasumiso" className="w-full object-cover rounded-2xl" style={{height: '6.5rem'}} />
+                  </div>
+                  <div>
+                    <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Kasumiso (Japanese)</h3>
+                    <p className="text-left text-base mb-3" style={{color: '#666666'}}>Built a visually appealing responsive website for a client using Nuxt. Collaborate with the designer to meet the client's requirements.</p>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {['Nuxt.js', 'Vue.js', 'JavaScript', 'CSS3'].map((tech) => (
+                        <span key={tech} className="px-2 py-1 text-xs rounded-full" style={{backgroundColor: 'rgba(255, 64, 0, 0.2)', color: '#ff4000'}}>
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <a href="https://kasumi-sou.biz/" className="inline-flex items-center px-4 py-2 text-white font-medium rounded-lg btn-primary">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-[auto_1fr] items-start" style={{gap: '2rem'}}>
+                  <div className="-mt-2">
+                    <img src="/images/portfolio_v1.png" alt="Portfolio v1" className="w-full object-cover rounded-2xl" style={{height: '6.5rem'}} />
+                  </div>
+                  <div>
+                    <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>My Portfolio Site v1</h3>
+                    <p className="text-left text-base mb-3" style={{color: '#666666'}}>My first journey of tech is beginning here. Built with foundational web technologies to showcase my early development skills.</p>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {['HTML', 'CSS', 'JavaScript'].map((tech) => (
+                        <span key={tech} className="px-2 py-1 text-xs rounded-full" style={{backgroundColor: 'rgba(255, 64, 0, 0.2)', color: '#ff4000'}}>
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <a href="https://ryoheimashiko.github.io/Portfolio_english/" className="inline-flex items-center px-4 py-2 text-white font-medium rounded-lg btn-primary">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'experience' && (
+            <div>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Frontend Developer</h3>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888'}}>2023 - Present</p>
+                  <p className="text-left text-base leading-relaxed" style={{color: '#666666'}}>
+                    Building and maintaining web applications using React, Vue.js, and Node.js. Focus on creating user-friendly interfaces and optimizing performance for travel planning applications.
+                  </p>
+                </div>
+                
+                <div>
+                  <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>B2B Account Manager</h3>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888'}}>2019 - 2023</p>
+                  <p className="text-left text-base leading-relaxed" style={{color: '#666666'}}>
+                    Managed client relationships and business development for B2B solutions. Gained valuable experience in project management, client communication, and understanding business requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+          </div>
+
+          {/* Mobile Content - Show All Sections */}
+          <div className="md:hidden">
+            {/* About Section */}
+            <div>
+              <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mt-20 mb-6" style={{color: '#666666'}}>About</h2>
+              <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
+                I'm a frontend developer from Japan, currently based in London. I love turning ideas into working applications, and I manage multiple web applications that help thousands of users plan their perfect trips.
+              </p>
+              <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
+                I'm comfortable working with React, Vue, and Node.js, and I'm always keen to learn new technologies. While I have a professional background in frontend development, I'm also eager to explore backend technologies like Golang and Rust.
+              </p>
+              <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
+                Before transitioning into tech, I spent four years in B2B account management, which has given me a solid understanding of the business side as well.  
+              </p>
+              <p className="text-left text-lg sm:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
+                Outside of work, I have many interests. I enjoy playing and watching volleyball, travelling, hiking, reading, running, cycling, and swimming. I also love discovering hidden gems, especially Japanese restaurants and food in London.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

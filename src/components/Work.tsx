@@ -15,7 +15,7 @@ export function Work() {
       description: "Built a visually appealing responsive website for a client using Nuxt. Collaborate with the designer to meet the client's requirements.",
       image: "/images/kasumiso.png",
       technologies: ["Nuxt.js", "Vue.js", "JavaScript", "CSS3"],
-      liveUrl: "#",
+      liveUrl: "https://kasumi-sou.biz/",
       githubUrl: "#"
     },
     {
@@ -32,31 +32,30 @@ export function Work() {
   return (
     <section id="work" style={{backgroundColor: '#faffff'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-        <div className="text-center mb-6">
-          <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mb-2" style={{color: '#666666'}}>Projects</h2>
-        </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-6">
+            <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mb-2" style={{color: '#666666'}}>Projects</h2>
+          </div>
 
-        <div className="space-y-16">
+          <div className="space-y-16">
           {projects.map((project, index) => (
             <div 
               key={project.id}
-              className={`grid md:grid-cols-2 gap-4 items-center ${
-                index % 2 === 1 ? 'md:grid-flow-col-dense' : ''
-              }`}
+              className="grid md:grid-cols-2 gap-8 items-center"
             >
               {/* Project Image */}
-              <div className={`${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
-                <div className="relative group rounded-2xl overflow-hidden">
+              <div>
+                <div className="relative rounded-2xl overflow-hidden">
                   <img 
                     src={project.image}
                     alt={project.title}
-                    className="w-3/5 md:w-full h-32 md:h-40 object-cover rounded-2xl"
+                    className="w-4/5 md:w-full h-32 md:h-40 object-cover rounded-2xl"
                   />
                 </div>
               </div>
 
               {/* Project Info */}
-              <div className={`${index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}`}>
+              <div>
                 <h3 className="text-lg md:text-xl font-bold mb-4" style={{color: '#666666'}}>
                   {project.title}
                 </h3>
@@ -91,6 +90,7 @@ export function Work() {
               </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </section>
