@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export function Work() {
   const projects = [
     {
@@ -38,7 +40,7 @@ export function Work() {
           </div>
 
           <div className="space-y-16">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div 
               key={project.id}
               className="grid md:grid-cols-2 gap-8 items-center"
@@ -46,9 +48,11 @@ export function Work() {
               {/* Project Image */}
               <div>
                 <div className="relative rounded-2xl overflow-hidden">
-                  <img 
+                  <Image 
                     src={project.image}
                     alt={project.title}
+                    width={150}
+                    height={150}
                     className="w-4/5 md:w-full h-32 md:h-40 object-cover rounded-2xl"
                   />
                 </div>

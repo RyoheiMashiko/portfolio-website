@@ -55,7 +55,6 @@ export function Header() {
               </button>
             </div>
           </div>
-        </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (

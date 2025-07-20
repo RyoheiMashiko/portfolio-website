@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 export function Hero() {
   const [activeTab, setActiveTab] = useState('about')
@@ -58,10 +59,10 @@ export function Hero() {
             {activeTab === 'about' && (
               <div>
           <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666'}}>
-            Hi! I'm a frontend developer from Japan with 4.5 years of professional experience. I love turning ideas into working applications and solving problems with tech.
-            <br/>Currently based in London, where I've been working for over 3 years, I manage multiple web applications that help thousands of users plan their perfect trips.</p>
+            Hi! I&apos;m a frontend developer from Japan with 4.5 years of professional experience. I love turning ideas into working applications and solving problems with tech.
+            <br/>Currently based in London, where I&apos;ve been working for over 3 years, I manage multiple web applications that help thousands of users plan their perfect trips.</p>
           <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666'}}>
-            I'm comfortable working with React, Vue, and Node.js, and I'm always keen to learn new technologies. While I have a professional background in frontend development, I'm also eager to explore backend technologies like Golang and Rust.
+            I&apos;m comfortable working with React, Vue, and Node.js, and I&apos;m always keen to learn new technologies. While I have a professional background in frontend development, I&apos;m also eager to explore backend technologies like Golang and Rust.
           </p>
           <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666'}}>
             Before transitioning into tech, I spent four years in B2B account management, which has given me a solid understanding of the business side as well.  
@@ -77,7 +78,7 @@ export function Hero() {
               <div className="space-y-12">
                 <div className="grid md:grid-cols-[auto_1fr] items-start cursor-pointer hover:opacity-80 transition-opacity duration-200" style={{gap: '1.5rem'}} onClick={() => window.open('https://langhelper.netlify.app/', '_blank')}>
                   <div>
-                    <img src="/images/langhelper.png" alt="LangHelper" className="w-full object-cover rounded-2xl" style={{height: '5.2rem'}} />
+                    <Image src="/images/langhelper.png" alt="LangHelper" width={150} height={150} className="w-full object-cover rounded-2xl" style={{height: '5.2rem'}} />
                   </div>
                   <div>
                     <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>LangHelper - AI Writing Assistant</h3>
@@ -94,11 +95,11 @@ export function Hero() {
                 
                 <div className="grid md:grid-cols-[auto_1fr] items-start cursor-pointer hover:opacity-80 transition-opacity duration-200" style={{gap: '1.5rem'}} onClick={() => window.open('https://kasumi-sou.biz/', '_blank')}>
                   <div>
-                    <img src="/images/kasumiso.png" alt="Kasumiso" className="w-full object-cover rounded-2xl" style={{height: '5.2rem'}} />
+                    <Image src="/images/kasumiso.png" alt="Kasumiso" width={150} height={150} className="w-full object-cover rounded-2xl" style={{height: '5.2rem'}} />
                   </div>
                   <div>
                     <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Kasumiso (Japanese)</h3>
-                    <p className="text-left text-base mb-3" style={{color: '#666666'}}>Built a visually appealing responsive website for a client using Nuxt. Collaborate with the designer to meet the client's requirements.</p>
+                    <p className="text-left text-base mb-3" style={{color: '#666666'}}>Built a visually appealing responsive website for a client using Nuxt. Collaborate with the designer to meet the client&apos;s requirements.</p>
                     <div className="flex flex-wrap gap-2 mb-3">
                       {['Nuxt.js', 'Vue.js', 'JavaScript', 'CSS3'].map((tech) => (
                         <span key={tech} className="px-2 py-1 text-xs rounded-full" style={{backgroundColor: 'rgba(255, 64, 0, 0.2)', color: '#ff4000'}}>
@@ -111,7 +112,7 @@ export function Hero() {
                 
                 <div className="grid md:grid-cols-[auto_1fr] items-start cursor-pointer hover:opacity-80 transition-opacity duration-200" style={{gap: '1.5rem'}} onClick={() => window.open('https://ryoheimashiko.github.io/Portfolio_english/', '_blank')}>
                   <div>
-                    <img src="/images/portfolio_v1.png" alt="Portfolio v1" className="w-full object-cover rounded-2xl" style={{height: '5.2rem'}} />
+                    <Image src="/images/portfolio_v1.png" alt="Portfolio v1" width={150} height={150} className="w-full object-cover rounded-2xl" style={{height: '5.2rem'}} />
                   </div>
                   <div>
                     <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>My Portfolio Site v1</h3>
@@ -166,10 +167,10 @@ export function Hero() {
             <div>
               <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mt-20 mb-6" style={{color: '#666666'}}>About</h2>
               <p className="text-left text-lg sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
-                I'm a frontend developer from Japan, currently based in London. I love turning ideas into working applications, and I manage multiple web applications that help thousands of users plan their perfect trips.
+                I&apos;m a frontend developer from Japan, currently based in London. I love turning ideas into working applications, and I manage multiple web applications that help thousands of users plan their perfect trips.
               </p>
               <p className="text-left text-lg sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
-                I'm comfortable working with React, Vue, and Node.js, and I'm always keen to learn new technologies. While I have a professional background in frontend development, I'm also eager to explore backend technologies like Golang and Rust.
+                I&apos;m comfortable working with React, Vue, and Node.js, and I&apos;m always keen to learn new technologies. While I have a professional background in frontend development, I&apos;m also eager to explore backend technologies like Golang and Rust.
               </p>
               <p className="text-left text-lg sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
                 Before transitioning into tech, I spent four years in B2B account management, which has given me a solid understanding of the business side as well.  
