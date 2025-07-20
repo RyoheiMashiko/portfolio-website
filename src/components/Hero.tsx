@@ -59,8 +59,8 @@ export function Hero() {
             {activeTab === 'about' && (
               <div>
           <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666'}}>
-            Hi! I&apos;m a frontend developer from Japan with 4.5 years of professional experience. I love turning ideas into working applications and solving problems with tech.
-            <br/>Currently based in London, where I&apos;ve been working for over 3 years, I manage multiple web applications that help thousands of users plan their perfect trips.</p>
+            Hi! I am a frontend developer from Japan with 4.5 years of professional experience. Currently based in London, where I have been working for over 3 years.
+            <br/>I enjoy turning ideas into functional applications and solving problems with technology.</p>
           <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666'}}>
             I&apos;m comfortable working with React, Vue, and Node.js, and I&apos;m always keen to learn new technologies. While I have a professional background in frontend development, I&apos;m also eager to explore backend technologies like Golang and Rust.
           </p>
