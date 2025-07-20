@@ -167,7 +167,8 @@ export function Hero() {
             <div>
               <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mt-20 mb-6" style={{color: '#666666'}}>About</h2>
               <p className="text-left text-lg sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
-                I&apos;m a frontend developer from Japan, currently based in London. I love turning ideas into working applications, and I manage multiple web applications that help thousands of users plan their perfect trips.
+                Hi! I am a frontend developer from Japan with 4.5 years of professional experience. Currently based in London, where I have been working for over 3 years.
+                <br/>I enjoy turning ideas into functional applications and solving problems with technology.
               </p>
               <p className="text-left text-lg sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
                 I&apos;m comfortable working with React, Vue, and Node.js, and I&apos;m always keen to learn new technologies. While I have a professional background in frontend development, I&apos;m also eager to explore backend technologies like Golang and Rust.
