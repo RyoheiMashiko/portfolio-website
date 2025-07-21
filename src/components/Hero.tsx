@@ -58,17 +58,17 @@ export function Hero() {
           <div className="hidden md:block">
             {activeTab === 'about' && (
               <div>
-          <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666'}}>
+          <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666', fontSize: '18px'}}>
             Hi! I am a frontend developer from Japan with 4.5 years of professional experience. Currently based in London, where I have been working for over 3 years.
             <br/>I enjoy turning ideas into functional applications and solving problems with technology.</p>
-          <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666'}}>
+          <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666', fontSize: '18px'}}>
             I&apos;m comfortable working with React, Vue, and Node.js, and I&apos;m always keen to learn new technologies. While I have a professional background in frontend development, I&apos;m also eager to explore backend technologies like Golang and Rust.
           </p>
-          <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666'}}>
+          <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666', fontSize: '18px'}}>
             Before transitioning into tech, I spent four years in B2B account management, which has given me a solid understanding of the business side as well.  
           </p>
-          <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666'}}>
-            Outside of work, I have many interests. I enjoy playing and watching volleyball, travelling, hiking, reading, running, cycling, and swimming. I also love discovering hidden gems, especially Japanese restaurants and food in London.
+          <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666', fontSize: '18px'}}>
+            Outside of work, I have many interests. I enjoy running, cycling, swimming, watching volleyball, reading, gaming, traveling, custom keyboards, and sleeping. I also love discovering hidden gems, especially Japanese restaurants and food in London.
           </p>
             </div>
           )}
@@ -177,7 +177,7 @@ export function Hero() {
                 Before transitioning into tech, I spent four years in B2B account management, which has given me a solid understanding of the business side as well.  
               </p>
               <p className="text-left text-base sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666', fontSize: '16px'}}>
-                Outside of work, I have many interests. I enjoy playing and watching volleyball, travelling, hiking, reading, running, cycling, and swimming. I also love discovering hidden gems, especially Japanese restaurants and food in London.
+                Outside of work, I have many interests. I enjoy running, cycling, swimming, watching volleyball, reading, gaming, traveling, custom keyboards, and sleeping. I also love discovering hidden gems, especially Japanese restaurants and food in London.
               </p>
             </div>
 
