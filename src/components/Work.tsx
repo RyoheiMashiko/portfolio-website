@@ -60,11 +60,11 @@ export function Work() {
 
               {/* Project Info */}
               <div>
-                <h3 className="text-lg md:text-xl font-bold mb-4" style={{color: '#666666'}}>
+                <h3 className="text-lg md:text-xl font-bold mb-2" style={{color: '#666666'}}>
                   {project.title}
                 </h3>
                 
-                <p className="text-lg mb-4 leading-relaxed" style={{color: '#666666'}}>
+                <p className="text-base mb-4 leading-relaxed" style={{color: '#666666', fontSize: '16px'}}>
                   {project.description}
                 </p>
                 

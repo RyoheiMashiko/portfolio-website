@@ -135,24 +135,24 @@ export function Hero() {
               <div className="space-y-8">
                 <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://www.snaptripgroup.com/', '_blank')}>
                   <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Frontend Developer</h3>
-                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888'}}>Snaptrip Group • Mar 2022 - Present • London</p>
-                  <p className="text-left text-base leading-relaxed" style={{color: '#666666'}}>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Snaptrip Group • Mar 2022 - Present • London</p>
+                  <p className="text-left text-base leading-relaxed" style={{color: '#666666', fontSize: '14px'}}>
                     Build and maintain critical frontend components across 10+ web applications serving 50,000+ daily users. Work closely with cross-functional teams, including developers, marketing, and product manager/data scientist, to deliver solutions that enhance user experience and drive commercial success.
                   </p>
                 </div>
                 
                 <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://www.asia-quest.jp/en/', '_blank')}>
                   <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Frontend Developer</h3>
-                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888'}}>Asia Quest • Oct 2020 - Dec 2021 • Tokyo</p>
-                  <p className="text-left text-base leading-relaxed" style={{color: '#666666'}}>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Asia Quest • Oct 2020 - Dec 2021 • Tokyo</p>
+                  <p className="text-left text-base leading-relaxed" style={{color: '#666666', fontSize: '14px'}}>
                     Quickly adapt to emerging technologies whilst consistently delivering high-quality code across multiple projects. Successfully developed a responsive car leasing web application from inception to completion, meeting all deadlines. Proactively created mock APIs to maintain frontend development progress during backend delays, ensuring continuous project advancement.
                   </p>
                 </div>
 
                 <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://www.itcenex.com/en/', '_blank')}>
                   <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>B2B Account Manager</h3>
-                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888'}}>Itochu Enex • Apr 2016 - Mar 2020 • Tokyo</p>
-                  <p className="text-left text-base leading-relaxed" style={{color: '#666666'}}>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Itochu Enex • Apr 2016 - Mar 2020 • Tokyo</p>
+                  <p className="text-left text-base leading-relaxed" style={{color: '#666666', fontSize: '14px'}}>
                     Establish and nurture strong relationships with SME executives and key decision-makers across diverse industries. Manage comprehensive credit assessments, develop pricing strategies, and lead contract negotiations to foster business growth and sustain long-term partnerships.
                   </p>
                 </div>
@@ -166,19 +166,49 @@ export function Hero() {
             {/* About Section */}
             <div>
               <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mt-20 mb-6" style={{color: '#666666'}}>About</h2>
-              <p className="text-left text-lg sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
+              <p className="text-left text-base sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666', fontSize: '16px'}}>
                 Hi! I am a frontend developer from Japan with 4.5 years of professional experience. Currently based in London, where I have been working for over 3 years.
                 <br/>I enjoy turning ideas into functional applications and solving problems with technology.
               </p>
-              <p className="text-left text-lg sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
+              <p className="text-left text-base sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666', fontSize: '16px'}}>
                 I&apos;m comfortable working with React, Vue, and Node.js, and I&apos;m always keen to learn new technologies. While I have a professional background in frontend development, I&apos;m also eager to explore backend technologies like Golang and Rust.
               </p>
-              <p className="text-left text-lg sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
+              <p className="text-left text-base sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666', fontSize: '16px'}}>
                 Before transitioning into tech, I spent four years in B2B account management, which has given me a solid understanding of the business side as well.  
               </p>
-              <p className="text-left text-lg sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666'}}>
+              <p className="text-left text-base sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666', fontSize: '16px'}}>
                 Outside of work, I have many interests. I enjoy playing and watching volleyball, travelling, hiking, reading, running, cycling, and swimming. I also love discovering hidden gems, especially Japanese restaurants and food in London.
               </p>
+            </div>
+
+            {/* Experience Section */}
+            <div>
+              <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mt-20 mb-6" style={{color: '#666666'}}>Experience</h2>
+              <div className="space-y-8">
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://www.snaptripgroup.com/', '_blank')}>
+                  <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Frontend Developer</h3>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Snaptrip Group • Mar 2022 - Present • London</p>
+                  <p className="text-left text-base leading-relaxed" style={{color: '#666666', fontSize: '14px'}}>
+                    Build and maintain critical frontend components across 10+ web applications serving 50,000+ daily users. Work closely with cross-functional teams, including developers, marketing, and product manager/data scientist, to deliver solutions that enhance user experience and drive commercial success.
+                  </p>
+                </div>
+                
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://www.asia-quest.jp/en/', '_blank')}>
+                  <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Frontend Developer</h3>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Asia Quest • Oct 2020 - Dec 2021 • Tokyo</p>
+                  <p className="text-left text-base leading-relaxed" style={{color: '#666666', fontSize: '14px'}}>
+                    Quickly adapt to emerging technologies whilst consistently delivering high-quality code across multiple projects. Successfully developed a responsive car leasing web application from inception to completion, meeting all deadlines. Proactively created mock APIs to maintain frontend development progress during backend delays, ensuring continuous project advancement.
+                  </p>
+                </div>
+
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://www.itcenex.com/en/', '_blank')}>
+                  <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>B2B Account Manager</h3>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Itochu Enex • Apr 2016 - Mar 2020 • Tokyo</p>
+                  <p className="text-left text-base leading-relaxed" style={{color: '#666666', fontSize: '14px'}}>
+                    Establish and nurture strong relationships with SME executives and key decision-makers across diverse industries. Manage comprehensive credit assessments, develop pricing strategies, and lead contract negotiations to foster business growth and sustain long-term partnerships.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
