@@ -57,7 +57,7 @@ pnpm audit
 
 ## Package Manager & Supply-Chain Security
 Settings are in `pnpm-workspace.yaml`:
-- `minimumReleaseAge: 1440` — only install versions published ≥1 day ago
+- `minimumReleaseAge: 10080` — only install versions published ≥7 days ago; urgent, reviewed security fixes go in `minimumReleaseAgeExclude` as exact `name@version` and are removed once 7 days old
 - `trustPolicy: no-downgrade` — reject versions published with weaker trust evidence than earlier ones; reviewed exceptions go in `trustPolicyExclude` as exact `name@version`
 - `strictDepBuilds` + `allowBuilds` — dependency install scripts are blocked unless explicitly allowed
 - `overrides` — pin vulnerable transitive deps (e.g. `next>postcss`)
