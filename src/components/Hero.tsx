@@ -57,7 +57,7 @@ export function Hero() {
             {activeTab === 'about' && (
               <div>
           <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666', fontSize: '18px'}}>
-            Hi! I am a software developer from Japan with 6 years of professional experience. I lived in London for 4 years and I&apos;m now based in Tokyo.
+            Hi! I am a software engineer from Japan with 6 years of professional experience. I lived in London for 4 years and I&apos;m now based in Tokyo.
             <br/>I enjoy turning ideas into functional applications and solving problems with technology.</p>
           <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666', fontSize: '18px'}}>
             I specialise in React and TypeScript, and I also have some backend experience with Python. I&apos;m always keen to learn new technologies.
@@ -116,7 +116,7 @@ export function Hero() {
             <div>
               <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mt-20 mb-6" style={{color: '#666666'}}>About</h2>
               <p className="text-left text-base sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666', fontSize: '16px'}}>
-                Hi! I am a software developer from Japan with 6 years of professional experience. I lived in London for 4 years and I&apos;m now based in Tokyo.
+                Hi! I am a software engineer from Japan with 6 years of professional experience. I lived in London for 4 years and I&apos;m now based in Tokyo.
                 <br/>I enjoy turning ideas into functional applications and solving problems with technology.
               </p>
               <p className="text-left text-base sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666', fontSize: '16px'}}>
