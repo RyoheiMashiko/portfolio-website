@@ -9,7 +9,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-left">
               <div className="mb-4 md:mb-0">
-                Ryohei © 2025
+                Ryohei © 2026
               </div>
             </div>
           </div>
