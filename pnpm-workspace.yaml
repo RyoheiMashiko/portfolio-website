@@ -1,0 +1,29 @@
+# pnpm settings (https://pnpm.io/settings)
+
+# Install only package versions published at least 1 day ago, so a
+# compromised release is likely to be caught and unpublished first.
+# Kept at 1 day (not longer) so security fixes can be picked up quickly.
+minimumReleaseAge: 1440
+
+# Fail if a package version is published with weaker trust evidence
+# (e.g. without provenance) than earlier versions.
+trustPolicy: no-downgrade
+# Exact versions reviewed and allowed: each is a maintenance release on an
+# older major line, published by the package's usual maintainer without
+# provenance after a newer major line started publishing with provenance.
+trustPolicyExclude:
+  - eslint-import-resolver-typescript@3.10.1 # required ^3 by eslint-config-next@15
+  - semver@6.3.1
+  - undici-types@6.21.0
+
+# Only these dependencies may run install/build scripts. Everything else
+# is blocked; an unapproved script makes the install fail.
+strictDepBuilds: true
+allowBuilds:
+  '@tailwindcss/oxide': true
+  unrs-resolver: true
+
+# next@15 pins postcss@8.4.31, which has known vulnerabilities.
+# The upstream fix only ships in next@16.
+overrides:
+  'next>postcss': ^8.5.33
