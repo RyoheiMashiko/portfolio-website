@@ -1,0 +1,45 @@
+# pnpm settings (https://pnpm.io/settings)
+
+# Install only package versions published at least 7 days ago, so a
+# compromised release (including worm-style campaigns that spread over
+# several days) is likely to be caught and unpublished first.
+minimumReleaseAge: 10080
+# Exact versions allowed before the 7-day wait, after review. Use only for
+# urgent security fixes, and remove each entry once it is older than 7 days.
+minimumReleaseAgeExclude:
+  - source-map-js@1.2.4 # security fix (GHSA-68fv-2mgg-jv7q); removable after 2026-11-26
+  # typescript-eslint 8.73.0 is the first release using patched minimatch@^11
+  # (ReDoS fix). Dev-only lint tooling. Removable after 2026-11-23.
+  - '@typescript-eslint/eslint-plugin@8.73.0'
+  - '@typescript-eslint/parser@8.73.0'
+  - '@typescript-eslint/project-service@8.73.0'
+  - '@typescript-eslint/scope-manager@8.73.0'
+  - '@typescript-eslint/tsconfig-utils@8.73.0'
+  - '@typescript-eslint/type-utils@8.73.0'
+  - '@typescript-eslint/types@8.73.0'
+  - '@typescript-eslint/typescript-estree@8.73.0'
+  - '@typescript-eslint/utils@8.73.0'
+  - '@typescript-eslint/visitor-keys@8.73.0'
+
+# Fail if a package version is published with weaker trust evidence
+# (e.g. without provenance) than earlier versions.
+trustPolicy: no-downgrade
+# Exact versions reviewed and allowed: each is a maintenance release on an
+# older major line, published by the package's usual maintainer without
+# provenance after a newer major line started publishing with provenance.
+trustPolicyExclude:
+  - eslint-import-resolver-typescript@3.10.1 # required ^3 by eslint-config-next@15
+  - semver@6.3.1
+  - undici-types@6.21.0
+
+# Only these dependencies may run install/build scripts. Everything else
+# is blocked; an unapproved script makes the install fail.
+strictDepBuilds: true
+allowBuilds:
+  '@tailwindcss/oxide': true
+  unrs-resolver: true
+
+# next@15 pins postcss@8.4.31, which has known vulnerabilities.
+# The upstream fix only ships in next@16.
+overrides:
+  'next>postcss': ^8.5.33

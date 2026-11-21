@@ -33,22 +33,36 @@ src/
 - **Accessibility**: Proper ARIA labels and semantic HTML
 
 ## Development Commands
+This project uses **pnpm** (not npm/yarn). The pnpm version is pinned via `packageManager` / `devEngines` in `package.json`, and `npm install` fails on purpose.
+
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Start development server
-npm run dev
+pnpm dev
 
 # Build for production
-npm run build
+pnpm build
 
 # Start production server
-npm start
+pnpm start
 
 # Run linting
-npm run lint
+pnpm lint
+
+# Check for vulnerabilities
+pnpm audit
 ```
+
+## Package Manager & Supply-Chain Security
+Settings are in `pnpm-workspace.yaml`:
+- `minimumReleaseAge: 10080` — only install versions published ≥7 days ago; urgent, reviewed security fixes go in `minimumReleaseAgeExclude` as exact `name@version` and are removed once 7 days old
+- `trustPolicy: no-downgrade` — reject versions published with weaker trust evidence than earlier ones; reviewed exceptions go in `trustPolicyExclude` as exact `name@version`
+- `strictDepBuilds` + `allowBuilds` — dependency install scripts are blocked unless explicitly allowed
+- `overrides` — pin vulnerable transitive deps (e.g. `next>postcss`)
+
+Never commit `package-lock.json`; add dependencies with `pnpm add`.
 
 ## Components
 
@@ -134,3 +148,5 @@ No environment variables required for basic functionality.
 - [ ] Implement animations library (Framer Motion)
 - [ ] Add testimonials section
 - [ ] Integrate CMS for content management
+## Communication
+- 返答は簡潔な日本語で書く（ユーザーの認知負荷を下げるため）

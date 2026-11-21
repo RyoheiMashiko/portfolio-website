@@ -2,17 +2,15 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+This project uses [pnpm](https://pnpm.io) (version pinned in `package.json`). npm is blocked via `devEngines`.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+corepack enable   # or: npm i -g pnpm@12.21.0
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
+
+Supply-chain security settings live in `pnpm-workspace.yaml`.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
