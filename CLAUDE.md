@@ -148,3 +148,5 @@ No environment variables required for basic functionality.
 - [ ] Implement animations library (Framer Motion)
 - [ ] Add testimonials section
 - [ ] Integrate CMS for content management
+## Communication
+- 返答は簡潔な日本語で書く（ユーザーの認知負荷を下げるため）
