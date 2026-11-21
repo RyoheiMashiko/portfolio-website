@@ -1,15 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 
 export function Hero() {
   const [activeTab, setActiveTab] = useState('about')
 
   const tabs = [
     { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'work', label: 'Projects' }
+    { id: 'experience', label: 'Experience' }
   ]
 
   return (
@@ -20,7 +18,7 @@ export function Hero() {
               Ryohei Mashiko
           </h1>
           <p className="text-left text-xl font-light sm:text-2xl leading-relaxed" style={{color: '#666666'}}>
-            Frontend Developer
+            Software Engineer
           </p>
           <div className="flex space-x-6 mt-4">
             <a href="https://github.com/ryoheimashiko" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">
@@ -59,83 +57,34 @@ export function Hero() {
             {activeTab === 'about' && (
               <div>
           <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666', fontSize: '18px'}}>
-            Hi! I am a frontend developer from Japan with 4.5 years of professional experience. Currently based in London, where I have been working for over 3 years.
+            Hi! I am a software engineer from Japan with 6 years of professional experience. I lived in London for 4 years and I&apos;m now based in Tokyo.
             <br/>I enjoy turning ideas into functional applications and solving problems with technology.</p>
           <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666', fontSize: '18px'}}>
-            I&apos;m comfortable working with React, Vue, and Node.js, and I&apos;m always keen to learn new technologies. While I have a professional background in frontend development, I&apos;m also eager to explore backend technologies like Go and Rust.
+            I specialise in React and TypeScript, and I also have some backend experience with Python. I&apos;m always keen to learn new technologies.
           </p>
           <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666', fontSize: '18px'}}>
             Before transitioning into tech, I spent 4 years in B2B account management, which has given me a solid understanding of the business side as well.  
           </p>
           <p className="text-left text-lg sm:text-xl mb-6 max-w-4xl leading-relaxed" style={{color: '#666666', fontSize: '18px'}}>
-            Outside of work, I have many interests. I enjoy running, cycling, swimming, watching volleyball, reading, gaming, traveling, custom keyboards, and sleeping. I also love discovering hidden gems, especially Japanese restaurants and food in London.
+            Outside of work, I&apos;m a dog lover and a mechanical keyboard enthusiast. I also enjoy spending time in nature and eating good food.
           </p>
-            </div>
-          )}
-
-          {activeTab === 'work' && (
-            <div>
-              <div className="space-y-12">
-                <div className="grid md:grid-cols-[auto_1fr] items-start cursor-pointer hover:opacity-80 transition-opacity duration-200" style={{gap: '1.5rem'}} onClick={() => window.open('https://langhelper.netlify.app/', '_blank')}>
-                  <div>
-                    <Image src="/images/langhelper.png" alt="LangHelper" width={150} height={150} className="w-full object-cover rounded-2xl" style={{height: '5.2rem'}} />
-                  </div>
-                  <div>
-                    <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>LangHelper - AI Writing Assistant</h3>
-                    <p className="text-left text-base mb-3" style={{color: '#666666'}}>Easy-to-use text editing with AI proofreading for enhanced writing quality and efficiency.</p>
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {['Next.js', 'Node.js', 'TypeScript', 'OpenAI API', 'Netlify Functions'].map((tech) => (
-                        <span key={tech} className="px-2 py-1 text-xs rounded-full" style={{backgroundColor: 'rgba(255, 64, 0, 0.2)', color: '#ff4000'}}>
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="grid md:grid-cols-[auto_1fr] items-start cursor-pointer hover:opacity-80 transition-opacity duration-200" style={{gap: '1.5rem'}} onClick={() => window.open('https://kasumi-sou.biz/', '_blank')}>
-                  <div>
-                    <Image src="/images/kasumiso.png" alt="Kasumiso" width={150} height={150} className="w-full object-cover rounded-2xl" style={{height: '5.2rem'}} />
-                  </div>
-                  <div>
-                    <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Kasumiso (Japanese)</h3>
-                    <p className="text-left text-base mb-3" style={{color: '#666666'}}>Built a visually appealing responsive website for a client using Nuxt. Collaborate with the designer to meet the client&apos;s requirements.</p>
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {['Nuxt.js', 'Vue.js', 'JavaScript', 'CSS3'].map((tech) => (
-                        <span key={tech} className="px-2 py-1 text-xs rounded-full" style={{backgroundColor: 'rgba(255, 64, 0, 0.2)', color: '#ff4000'}}>
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="grid md:grid-cols-[auto_1fr] items-start cursor-pointer hover:opacity-80 transition-opacity duration-200" style={{gap: '1.5rem'}} onClick={() => window.open('https://ryoheimashiko.github.io/Portfolio_english/', '_blank')}>
-                  <div>
-                    <Image src="/images/portfolio_v1.png" alt="Portfolio v1" width={150} height={150} className="w-full object-cover rounded-2xl" style={{height: '5.2rem'}} />
-                  </div>
-                  <div>
-                    <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>My Portfolio Site v1</h3>
-                    <p className="text-left text-base mb-3" style={{color: '#666666'}}>My first journey of tech is beginning here. Built with foundational web technologies to showcase my early development skills.</p>
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {['HTML', 'CSS', 'JavaScript'].map((tech) => (
-                        <span key={tech} className="px-2 py-1 text-xs rounded-full" style={{backgroundColor: 'rgba(255, 64, 0, 0.2)', color: '#ff4000'}}>
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           )}
 
           {activeTab === 'experience' && (
             <div>
               <div className="space-y-8">
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://tenchijin.co.jp/en/', '_blank')}>
+                  <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Software Engineer</h3>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Tenchijin Inc. • Jan 2026 - Present • Tokyo</p>
+                  <p className="text-left text-base leading-relaxed" style={{color: '#666666', fontSize: '14px'}}>
+                    Develop web applications at a space-tech company that combines satellite data and AI to visualise hidden risks and untapped potential on Earth, with a focus on products that address challenges in water infrastructure.
+                  </p>
+                </div>
+
                 <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://www.snaptripgroup.com/', '_blank')}>
                   <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Frontend Developer</h3>
-                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Snaptrip Group • Mar 2022 - Present • London</p>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Snaptrip Group • Mar 2022 - Dec 2025 • London</p>
                   <p className="text-left text-base leading-relaxed" style={{color: '#666666', fontSize: '14px'}}>
                     Build and maintain critical frontend components across 10+ web applications serving 50,000+ daily users. Work closely with cross-functional teams, including developers, marketing, and product manager/data scientist, to deliver solutions that enhance user experience and drive commercial success.
                   </p>
@@ -167,17 +116,17 @@ export function Hero() {
             <div>
               <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mt-20 mb-6" style={{color: '#666666'}}>About</h2>
               <p className="text-left text-base sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666', fontSize: '16px'}}>
-                Hi! I am a frontend developer from Japan with 4.5 years of professional experience. Currently based in London, where I have been working for over 3 years.
+                Hi! I am a software engineer from Japan with 6 years of professional experience. I lived in London for 4 years and I&apos;m now based in Tokyo.
                 <br/>I enjoy turning ideas into functional applications and solving problems with technology.
               </p>
               <p className="text-left text-base sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666', fontSize: '16px'}}>
-                I&apos;m comfortable working with React, Vue, and Node.js, and I&apos;m always keen to learn new technologies. While I have a professional background in frontend development, I&apos;m also eager to explore backend technologies like Go and Rust.
+                I specialise in React and TypeScript, and I also have some backend experience with Python. I&apos;m always keen to learn new technologies.
               </p>
               <p className="text-left text-base sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666', fontSize: '16px'}}>
                 Before transitioning into tech, I spent 4 years in B2B account management, which has given me a solid understanding of the business side as well.  
               </p>
               <p className="text-left text-base sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed" style={{color: '#666666', fontSize: '16px'}}>
-                Outside of work, I have many interests. I enjoy running, cycling, swimming, watching volleyball, reading, gaming, traveling, custom keyboards, and sleeping. I also love discovering hidden gems, especially Japanese restaurants and food in London.
+                Outside of work, I&apos;m a dog lover and a mechanical keyboard enthusiast. I also enjoy spending time in nature and eating good food.
               </p>
             </div>
 
@@ -185,9 +134,17 @@ export function Hero() {
             <div>
               <h2 className="text-left text-xl font-bold sm:text-2xl lg:text-3xl mt-20 mb-6" style={{color: '#666666'}}>Experience</h2>
               <div className="space-y-8">
+                <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://tenchijin.co.jp/en/', '_blank')}>
+                  <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Software Engineer</h3>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Tenchijin Inc. • Jan 2026 - Present • Tokyo</p>
+                  <p className="text-left text-base leading-relaxed" style={{color: '#666666', fontSize: '14px'}}>
+                    Develop web applications at a space-tech company that combines satellite data and AI to visualise hidden risks and untapped potential on Earth, with a focus on products that address challenges in water infrastructure.
+                  </p>
+                </div>
+
                 <div className="cursor-pointer hover:opacity-80 transition-opacity duration-200" onClick={() => window.open('https://www.snaptripgroup.com/', '_blank')}>
                   <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Frontend Developer</h3>
-                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Snaptrip Group • Mar 2022 - Present • London</p>
+                  <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Snaptrip Group • Mar 2022 - Dec 2025 • London</p>
                   <p className="text-left text-base leading-relaxed" style={{color: '#666666', fontSize: '14px'}}>
                     Build and maintain critical frontend components across 10+ web applications serving 50,000+ daily users. Work closely with cross-functional teams, including developers, marketing, and product manager/data scientist, to deliver solutions that enhance user experience and drive commercial success.
                   </p>
