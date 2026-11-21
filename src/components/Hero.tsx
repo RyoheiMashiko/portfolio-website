@@ -78,7 +78,7 @@ export function Hero() {
                   <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Software Engineer</h3>
                   <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Tenchijin Inc. • Jan 2026 - Present • Tokyo</p>
                   <p className="text-left text-base leading-relaxed" style={{color: '#666666', fontSize: '14px'}}>
-                    Develop web applications for a space-tech company that combines satellite data and AI to visualise hidden risks and untapped potential on Earth, including Tenchijin COMPASS, a digital globe platform. Contribute to products tackling social challenges such as water infrastructure, agriculture, and disaster prevention.
+                    Develop web applications at a space-tech company that combines satellite data and AI to visualise hidden risks and untapped potential on Earth, with a focus on products that address challenges in water infrastructure.
                   </p>
                 </div>
 
@@ -138,7 +138,7 @@ export function Hero() {
                   <h3 className="text-left text-lg font-bold mb-2" style={{color: '#666666'}}>Software Engineer</h3>
                   <p className="text-left text-base font-medium mb-2" style={{color: '#888888', fontSize: '14px'}}>Tenchijin Inc. • Jan 2026 - Present • Tokyo</p>
                   <p className="text-left text-base leading-relaxed" style={{color: '#666666', fontSize: '14px'}}>
-                    Develop web applications for a space-tech company that combines satellite data and AI to visualise hidden risks and untapped potential on Earth, including Tenchijin COMPASS, a digital globe platform. Contribute to products tackling social challenges such as water infrastructure, agriculture, and disaster prevention.
+                    Develop web applications at a space-tech company that combines satellite data and AI to visualise hidden risks and untapped potential on Earth, with a focus on products that address challenges in water infrastructure.
                   </p>
                 </div>
 
